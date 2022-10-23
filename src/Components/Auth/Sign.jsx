@@ -1,5 +1,4 @@
 import React,{useState} from 'react'
-import { Link } from 'react-router-dom';
 import {Link, useNavigate}  from 'react-router-dom'
 import axios from 'axios';
 import jwt_decode from 'jwt-decode'
@@ -8,7 +7,8 @@ const Sign = () => {
         const [password,setpassword] = useState("");
         const [email,setemail] = useState("");
         const [err,setErr] = useState({});
-        
+        const [st,setSt] = useState("");
+        const navigate = useNavigate();
         
           const trig= async (e)=>{
             e.preventDefault();
