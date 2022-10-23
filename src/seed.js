@@ -1,0 +1,134 @@
+const foodItems =[
+    {
+        img:"https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+         name:"Veg Salad",
+        price:1,
+        region:"Indian",
+        tag:"snack",
+        rating:"5",
+        id:"0",
+        quantity:0
+    },
+    {
+        img:"https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Zm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+        name:"Pizza",
+        price:2,
+        region:"Italian",
+        tag:"snack",
+        rating:"5",
+        id:"1",
+        quantity:0
+    },
+    {
+        img:"https://images.unsplash.com/photo-1589302168068-964664d93dc0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aW5kaWFuJTIwZm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+         name:"Veg Biryani",
+        price:1,
+        region:"Indian",
+        tag:"dinning",
+        rating:"4",
+        id:"2",
+        quantity:0
+    },
+    {
+        img:"https://media.istockphoto.com/photos/scotch-eggs-with-herbs-on-the-green-bowl-picture-id681635932?k=20&m=681635932&s=170667a&w=0&h=JnFcYmkAjx1zK0c6vwJXL1K9aMEFWucW1Gs3fwFAGO8=",
+        name:"Scotch Egg",
+        price:3,
+        region:"Scottland",
+        tag:"dinning",
+        rating:"3.8",
+        id:"3",
+        quantity:0
+    },
+    {
+        img:"https://media.istockphoto.com/photos/stack-of-blueberry-pancakes-with-maple-syrup-picture-id1031663230?k=20&m=1031663230&s=170667a&w=0&h=BO8eTyRV7QwrND-HZ0W7of20f9P8_7fKLfwwjVArquQ=",
+        name:"Pancake",
+        price:2,
+        region:"Greek",
+        tag:"dinning",
+        rating:"4",
+        id:"4",
+        quantity:0
+    },
+    {
+        img:"https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGluZGlhbiUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        name:"Samosa",
+        price:0.8,
+        region:"Indian",
+        tag:"snack",
+        rating:"5",
+        id:"5",
+        quantity:0
+        
+    },
+    {
+        img:"https://images.unsplash.com/photo-1517244683847-7456b63c5969?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aW5kaWFuJTIwZm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+         name:"Moong Halwa",
+        price:1,
+        region:"Indian",
+        tag:"dinning",
+        rating:"4.5",
+        id:"6",
+        quantity:0
+    },
+    {
+        img:"https://images.unsplash.com/photo-1606491956689-2ea866880c84?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGluZGlhbiUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+         name:"Pav Bhaji",
+        price:1,
+        region:"Indian",
+        tag:"snack",
+        rating:"5",
+        id:"7",
+        quantity:0
+    },
+    {
+        img:"https://images.unsplash.com/photo-1604152135912-04a022e23696?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGluZGlhbiUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+         name:"Indian Curry",
+        price:1.2,
+        region:"Indian",
+        tag:"dinning",
+        rating:"4",
+        id:"8",
+        quantity:0
+    },
+    {
+        img:"https://media.istockphoto.com/photos/assorted-south-indian-breakfast-foods-on-wooden-background-ghee-dosa-picture-id1292563627?s=612x612",
+        name:"Special Dosa",
+        price:2,
+        region:"Indian",
+        tag:"dinning",
+        rating:"5",
+        id:"9",
+        quantity:0
+    },
+    {
+        img:"https://images.unsplash.com/photo-1499638673689-79a0b5115d87?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bW9ja3RhaWxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        name:"Cool Tea",
+        price:2,
+        region:"Indian",
+        tag:"party",
+        rating:"5",
+        id:"10",
+        quantity:0
+    },
+    {
+        img:"https://images.unsplash.com/photo-1619604394993-45c3ae65d12d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9ja3RhaWxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        name:"Coolers",
+        price:1,
+        region:"Indian",
+        tag:"party",
+        rating:"5",
+        id:"11",
+        quantity:0
+    },
+    {
+        img:"https://images.unsplash.com/photo-1596458598955-cea21e95a20b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bW9ja3RhaWxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        name:"Cocktail",
+        price:2,
+        region:"Indian",
+        tag:"party",
+        rating:"5",
+        id:"12",
+        quantity:0
+    },
+];
+export default foodItems
