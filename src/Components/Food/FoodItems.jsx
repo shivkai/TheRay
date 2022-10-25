@@ -37,7 +37,7 @@ const arr = [];
                             foodItems.map((item)=>{
                                 return(
                                     (choice==="")?(
-                                        <><div key={item.id} name={item.tag} className="max-w-md md:max-h-[485px] bg-transparent py-2 rounded-lg overflow-hidden hover:shadow-lg ">
+                                        <div key={item.id} name={item.tag} className="max-w-md md:max-h-[485px] bg-transparent py-2 rounded-lg overflow-hidden hover:shadow-lg ">
                                         <img className="w-full h-[300px] " src={item.img} alt="Sunset in the mountains"/>
                                          <div className="container">
                                             <div className="grid grid-cols-2 mt-2">
@@ -58,12 +58,12 @@ const arr = [];
                                          <div className='flex justify-center mb-2'>                                   
                                                 <button onClick={add} id={item.id} className=' bg-red-500 rounded-xl px-8 py-3 hover:bg-red-400 font-semibold text-white text-md'>Add To Cart</button>
                                             </div>
-                                    </div></>
+                                    </div>
                                 ):(
                                     (choice===item.tag)?
                                
                             
-                            <><div key={item.id} name={item.tag} className="max-w-md md:max-h-[485px] bg-transparent py-2 rounded-lg overflow-hidden hover:shadow-lg ">
+                            <div key={item.id} name={item.tag} className="max-w-md md:max-h-[485px] bg-transparent py-2 rounded-lg overflow-hidden hover:shadow-lg ">
                             <img className="w-full h-[300px] " src={item.img} alt="Sunset in the mountains"/>
                              <div className="container">
                                 <div className="grid grid-cols-2 mt-2">
@@ -84,7 +84,7 @@ const arr = [];
                              <div className='flex justify-center mb-2'>                                   
                                     <button onClick={add} id={item.id} className=' bg-red-500 rounded-xl px-8 py-3 hover:bg-red-400 font-semibold text-white text-md'>Add To Cart</button>
                                 </div>
-                        </div></>:<div key={item.id}></div> )
+                        </div>:<div key={item.id}></div> )
                             )})}
                             
                            

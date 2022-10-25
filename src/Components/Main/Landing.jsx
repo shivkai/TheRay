@@ -36,8 +36,7 @@ const Landing = () => {
     
 
   return (
-    <>
-
+    <div>
     <div id="tt" className={`  ${visible?'bg-white':'bg-black opacity-90 text-white'} align-middle items-center px-2 flex flex-row fixed top-0 left-0  right-0 z-50 justify-between`}>
         <div className="relative ml-2">
             <p className="md:w-14 md:h-14 w-10 h-10 rounded-xl"><img className="rounded-full" src="/logo.png" /></p>
@@ -66,7 +65,7 @@ const Landing = () => {
           </div>
         </div>
       </div>
-   ):<></>} 
+   ):<div></div>} 
 
       <section className=" max-w-full" id="home" >
         <div className="">
@@ -359,7 +358,7 @@ src="https://www.youtube.com/embed/tgbNymZ7vqY">
 
 
  </footer>
-    </>
+    </div>
   
       )}
 

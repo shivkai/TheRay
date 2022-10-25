@@ -1,7 +1,5 @@
 import React from 'react'
 import { Routes,Route, useNavigate } from 'react-router-dom'
-// import Cart from '../Cart/Cart'
-import Compiled from './Compiled'
 import Main from '../Food/Main'
 import { useState,useEffect } from 'react'
 import Loginn from '../Auth/Loginn'
@@ -28,13 +26,11 @@ const Home = () => {
         <div  className="overflow-hidden">
             <Routes>
                  {/* <Route path='landing' element={<Compiled/>}/> */}
-                 <Route path='nn' element={<Landing/>} />
+                 <Route path='/' element={<Landing/>} />
                 <Route path='signup' element={<Sign/>}/>
-                <Route path='/' element={<Compiled/>}/> 
                 <Route path='login'  element={<Loginn setUser={setUser}/>}/>
-               {(localStorage.getItem("userId") && localStorage.getItem("userId").length>0) && <><Route path='home' element={<Main user={user} setUser={setUser}/>}/>
-              {/* //   <Route path="cart" element={<Cart/>}/> */}
-                 </>
+               {(localStorage.getItem("userId") && localStorage.getItem("userId").length>0) && <Route path='home' element={<Main user={user} setUser={setUser}/>}/>
+            
   }
             </Routes>
         </div>
