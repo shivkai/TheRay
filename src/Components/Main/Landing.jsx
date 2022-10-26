@@ -38,8 +38,8 @@ const Landing = () => {
   return (
     <div>
     <div id="tt" className={`  ${visible?'bg-white':'bg-black opacity-90 text-white'} align-middle items-center px-2 flex flex-row fixed top-0 left-0  right-0 z-50 justify-between`}>
-        <div className="relative ml-2">
-            <p className="md:w-14 md:h-14 w-10 h-10 rounded-xl"><img className="rounded-full" src="/logo.png" /></p>
+        <div className="relative ml-2 py-2">
+            <p className="md:w-14 md:h-14  w-10 h-10 rounded-xl"><img className="rounded-full" src="/logo.png" /></p>
         </div>
         <div  className="hidden lg:w-[50%] lg:flex lg:flex-row lg:justify-evenly">
             <a href="#home" className="cursor-pointer px-4 pt-1 pb-1 hover:bg-slate-500 hover:rounded-md hover:text-white font-mono font-semibold text-lg">Home</a>
@@ -55,13 +55,14 @@ const Landing = () => {
    {show?(
     
     
-      <div className="bg-black opacity-90 h-[100vh] w-[35vw] absolute top-0 left-0 z-40 p-4">
+      <div className="bg-black opacity-100 h-[100vh] w-[35vw] absolute top-0 left-0 z-50 p-4">
         <div className=" h-[80%]">
-          <div className="flex h-[40%] opacity-100 flex-col justify-evenly">
+          <div className="flex h-[50%] opacity-100 flex-col justify-between">
             <p className=" text-white opacity-100 font-semibold py-2 px-1">Home</p>
             <p className=" text-white font-semibold  py-2 px-1">Dish</p>
             <p className="  text-white font-semibold  py-2 px-1">Chefs</p>
-            <p className="  text-white font-semibold  py-2 px-1">Contact</p>
+            <p className="mt-2 bg-opacity-100 z-50"><Link to="/login" className="px-4 opacity-100 py-2 mt-2 bg-green-400 mr-2 text-white rounded-sm">Login</Link></p>
+            <p  className="mt-2"><Link to="/signup" className="px-4 text-white py-2 rounded-sm bg-blue-500">Sign Up</Link></p>
           </div>
         </div>
       </div>
@@ -72,13 +73,13 @@ const Landing = () => {
 
         <img className="w-full bg-cover min-h-[80vh] mt-6 md:mt-3" src={"/landing.png"} alt="food image" />
         </div>
-        <div className="absolute md:w-[55%] top-40 left-10 text-white leading-loose">
+        <div className="absolute top-40 left-5 text-white leading-loose">
             <h2 className="text-xl">WIDE OPTIONS OF CHOICE</h2>
-            <h1 className="text-5xl whitespace-nowrap md:text-6xl mt-4 font-serif font-semibold">Delicious Food</h1>
-            <p className=" mtext-lg font-normal mt-4 break-words ">At Ray we take pride in what we make and in what we do.<br></br> We like minded people banded together to fullfill our aim to 
+            <h1 className="text-3xl whitespace-nowrap md:text-6xl mt-4 font-serif font-semibold">Delicious Food</h1>
+            <p className=" text-lg font-normal mt-4 break-words ">At Ray we take pride in what we make and in what we do.<br></br> We like minded people banded together to fullfill our aim to 
                 providea healthy and good taste food at a affordable price.
             </p>
-            <button className="mt-4 border border-red-500 bg-red-500 rounded-full px-3 py-2">CHECK OUR MENU</button>
+            <button className="mt-4 border border-red-500 bg-red-500 rounded-full md:px-3 md:py-2 px-2 py-1">CHECK OUR MENU</button>
         </div>
      
       </section>
@@ -87,35 +88,35 @@ const Landing = () => {
       <section  className="mt-4 flex flex-col align-middle justify-center items-center">
         <div className="">
             <h1 className="text-center text-3xl tracking-wider font-medium">Our Top Rated Dishes</h1>
-            <h2 className="text-center mt-2 font-normal tracking-wide">The most enjoyed dishes</h2>
+            <h2 className="text-xl font-thin italic mb-2 text-center tracking-wider">The most enjoyed dishes</h2>
         </div>
         <div className="mt-6 flex flex-nowrap mx-2  justify-center md:gap-2 lg:gap-1  flex-col md:flex-row items-center">
 
-            <div className="flex mb-4 w-[60%] md:w-[28%] lg:w-[33%]   flex-col items-center justify-evenly gap-2  leading-10 ">
+            <div className="flex mb-4 w-[80%] md:w-[28%] lg:w-[33%]   flex-col items-center justify-evenly gap-2  leading-6 ">
                 <div className="hover:text-red-500  ">
 
-                <img className="h-[25vh] hover:-skew-x-6 hover:scale-105 mb-2 " src={'/food.jpg'}/>
-                <h2 className="text-center font-medium text-2xl">SOME FOOD</h2>
+                <img className="md:h-[29vh] md:w-[23vw] h-[32vh] w-[60vw]  hover:-skew-x-6 hover:scale-105 mb-2 " src={'/dump.webp'}/>
+                <h2 className="text-center font-medium text-2xl">Dumplings</h2>
                 </div>
-                <h3 className="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, delectus?</h3>
+                <h3 className="text-center">This cuisine, native to north-east India, have a majestic taste.</h3>
             </div>
             
-            <div className="flex mb-4 w-[60%] md:w-[28%] lg:w-[33%]   flex-col items-center justify-evenly gap-2  leading-10 ">
+            <div className="flex mb-4 w-[80%] md:w-[28%] lg:w-[33%] mt-4   flex-col items-center justify-evenly gap-2  leading-6 ">
                 <div className="hover:text-red-500  ">
 
-                <img className="h-[25vh] hover:-skew-x-6 hover:scale-105 mb-2 " src={'/food.jpg'}/>
-                <h2 className="text-center font-medium text-2xl">SOME FOOD</h2>
+                <img className="md:h-[29vh] md:w-[23vw] h-[32vh] w-[60vw]   hover:-skew-x-6 hover:scale-105 mb-2 " src={'/pan.webp'}/>
+                <h2 className="text-center font-medium text-2xl">Pancake</h2>
                 </div>
-                <h3 className="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, delectus?</h3>
+                <h3 className="text-center">The most savoured food in Europe, originated from Greece, is like eating sweet clouds.</h3>
             </div>
 
-            <div className="flex mb-4 w-[60%] md:w-[28%] lg:w-[33%]   flex-col items-center justify-evenly gap-2  leading-10 ">
+            <div className="flex mb-4 w-[80%] md:w-[28%] lg:w-[33%] mt-4  flex-col items-center justify-evenly gap-2  leading-6 ">
                 <div className="hover:text-red-500  ">
 
-                <img className="h-[25vh] hover:-skew-x-6 hover:scale-105 mb-2 " src={'/food.jpg'}/>
-                <h2 className="text-center font-medium text-2xl">SOME FOOD</h2>
+                <img className="md:h-[29vh] md:w-[23vw] h-[32vh] w-[60vw]  hover:-skew-x-6 hover:scale-105 mb-2 " src={'/soup.webp'}/>
+                <h2 className="text-center font-medium text-2xl">Veggies Soup</h2>
                 </div>
-                <h3 className="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, delectus?</h3>
+                <h3 className="text-center">The Indian vegetable soup with tint of chinese flavour is a force to reckon with.</h3>
             </div>
             </div>
             
@@ -207,26 +208,26 @@ src="https://www.youtube.com/embed/tgbNymZ7vqY">
           </div>
           <div className="mx-auto ">
  
-        <div id="carouselExampleControls" class="mx-auto w-[80%] h-[60%] carousel slide relative" data-bs-ride="carousel">
+        <div id="carouselExampleControls" class="mx-auto w-[80%]  carousel slide relative" data-bs-ride="carousel">
   <div class="carousel-inner relative w-full overflow-hidden">
     <div class="carousel-item active relative float-left w-full">
       <img
         src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGZvb2R8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-        class="block w-full"
+        class="block w-full h-[50vh] md:h-[100vh]"
         alt="Wild Landscape"
       />
     </div>
     <div class="carousel-item relative float-left w-full">
       <img
         src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzF8fGZvb2R8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-        class="block w-full"
+        class="block w-full h-[50vh] md:h-[100vh]"
         alt="Camera"
       />
     </div>
     <div class="carousel-item relative float-left w-full">
       <img
         src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDZ8fGZvb2R8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-        class="block w-full"
+        class="block w-full h-[50vh] md:h-[100vh]"
         alt="Exotic Fruits"
       />
     </div>
@@ -260,12 +261,13 @@ src="https://www.youtube.com/embed/tgbNymZ7vqY">
 
 
 <section id="chef" className="mt-10 p-4">
-  <div className="flex justify-center mb-14">
-    <h1 className="text-4xl font-semibold italic ">Our Master Chef's</h1>
+  <div className="flex justify-center flex-col mb-14">
+    <h1 className="text-4xl font-semibold italic text-center ">Our Master Chef's</h1>
+    <h2 className="text-xl font-thin italic mb-2 text-center tracking-widest">The Pillar's</h2>
   </div>
-  <div className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 place-items-center">
+  <div className="grid md:grid-cols-2 md:gap-2 gap-4 grid-cols-1 lg:grid-cols-4 place-items-center">
   
-    <div class=" md:w-[75%] rounded overflow-hidden shadow-lg">
+    <div class=" md:w-[75%] w-[80%] rounded overflow-hidden shadow-lg">
   <img class="w-full h-[70%]" src="/pic.png" alt="Sunset in the mountains"/>
   <div class="px-6 py-4">
   <div class="font-bold text-xl mb-2">The Fryer</div>
@@ -273,13 +275,13 @@ src="https://www.youtube.com/embed/tgbNymZ7vqY">
       Mia Yosuvich, alwyas up for oily ans fried items.
     </p>
   </div>
-  <div class="px-6 pt-4 pb-2">
+  <div class="px-6 pt-2 pb-1">
     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
   </div>
 </div>
-<div class=" md:w-[75%] rounded overflow-hidden shadow-lg">
+<div class=" md:w-[75%] w-[80%] rounded overflow-hidden shadow-lg">
   <img class="w-full h-[75%]" src="/pic2.png" alt="Sunset in the mountains"/>
   <div class="px-6 py-4">
     <div class="font-bold text-xl mb-3">The Baker</div>
@@ -287,14 +289,14 @@ src="https://www.youtube.com/embed/tgbNymZ7vqY">
       Rishi singh, The Baker geek.
     </p>
   </div>
-  <div class="px-6 pt-4 pb-2">
+  <div class="px-6 pt-2 pb-1">
     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
   </div>
 </div>
 
-<div class=" md:w-[75%] rounded overflow-hidden shadow-lg">
+<div class=" md:w-[75%] w-[80%] rounded overflow-hidden shadow-lg">
   <img class="w-full h-[70%]" src="/pic1.png" alt="Sunset in the mountains"/>
   <div class="px-6 py-4">
   <div class="font-bold text-2xl mb-2">The Garnisher</div>
@@ -302,14 +304,14 @@ src="https://www.youtube.com/embed/tgbNymZ7vqY">
       Hinamoto Yumi, The best garnisher second to none.
     </p>
   </div>
-  <div class="px-6 pt-4 pb-2">
+  <div class="px-6 pt-2 pb-1">
     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
   </div>
 </div>
 
-<div class=" md:w-[75%] rounded overflow-hidden shadow-lg">
+<div class=" md:w-[75%] w-[80%] rounded overflow-hidden shadow-lg">
   <img class="w-full h-[70%]" src="/pic3.png" alt="Sunset in the mountains"/>
   <div class="px-6 py-4">
   <div class="font-bold text-2xl mb-2">The Soup Specialist</div>
@@ -317,7 +319,7 @@ src="https://www.youtube.com/embed/tgbNymZ7vqY">
       Heena sharma, The godess of soupy food.
     </p>
   </div>
-  <div class="px-6 pt-4 pb-2">
+  <div class="px-6 pt-2 pb-1">
     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
@@ -331,7 +333,7 @@ src="https://www.youtube.com/embed/tgbNymZ7vqY">
 
 
  <footer class="text-white p-4 rounded-sm shadow md:px-6 md:py-8 bg-black opacity-90 ">
-    <div class="sm:flex sm:items-center sm:justify-between">
+    <div class="sm:flex sm:items-center sm:justify-between p-4">
         <a href="#home" class="flex items-center mb-4 sm:mb-0">
             <img src="/logo.png" class="mr-3 h-8 rounded-full" alt="ray Logo"/>
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">The Ray</span>
@@ -352,7 +354,7 @@ src="https://www.youtube.com/embed/tgbNymZ7vqY">
         </ul>
     </div>
     <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"/>
-    <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="/nn" class="hover:underline">TheRay™</a>. All Rights Reserved.
+    <span class="block text-sm text-gray-500 text-center dark:text-gray-400">© 2022 <a href="/nn" class="hover:underline">TheRay™</a>. All Rights Reserved.
     </span>
 </footer>
 
