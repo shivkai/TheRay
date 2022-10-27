@@ -38,11 +38,11 @@ useEffect(() => {
 
       axios.post(`https://theray.herokuapp.com/api/login`,{email,password})
        .then((data)=>{
-        console.log(data);
-        if(data.data.msg!="Login Successfull"){
-        setErr(data.data.msg);}
-        else if(data.data.msg=="Login Successfull"){
-          setOk(data.data.msg);
+        console.log(data.statusText);
+        if(data.statusText==="OK"){
+        setOk(data.statusText);}
+        else if(data.statusText==="No Content"){
+          setErr(data.statusText);
         }
         const ff = jwt_decode(data.data.user);
           setUser(ff);
@@ -57,14 +57,20 @@ useEffect(() => {
  
   
   return (
-      <div className="-mt-10 bg-gray-100 text-gray-900 flex justify-center">
+    <div className=" bg-gray-100 text-gray-900 flex flex-col md:flex-row justify-center">
 
-
+    <div className='bg-white  md:hidden'>
+<img
+  src={'/ray.png'}
+  className="h-[55px]  md:h-30 mx-auto"
+  alt='ddd'
+/>
+</div>
       <div
-      className="max-w-screen-xl m-0 sm:m-20 bg-white shadow sm:rounded-lg flex justify-center flex-1"
+      className="max-w-screen-xl lg:flex-row flex-col-reverse m-0 sm:m-20 bg-white shadow sm:rounded-lg flex justify-center flex-1"
     >
       <div className="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
-        <div>
+        <div className='hidden md:block'>
           <img
             src={'/ray.png'}
             className="h-[55px] md:h-30 mx-auto"
@@ -206,16 +212,16 @@ useEffect(() => {
              
             </div>
             <p className='text-center font-medium'>Not Registered? <Link className='font-semibold underline text-blue-600' to='/signup'>Sign Up </Link>here</p>
-            <p className='text-center font-medium text-md'>Or Go Back To <Link className='font-semibold underline text-blue-600' to='/nn'>Home </Link></p>
+            <p className='text-center font-medium text-md'>Or Go Back To <Link className='font-semibold underline text-blue-600' to='/'>Home </Link></p>
           </div>
         </div>
       </div>
-      <div className="flex-1 bg-indigo-100 text-center hidden lg:flex">
-        <img
-          className="m-12 animate-spin xl:m-16 w-full bg-contain bg-center bg-no-repeat"
-          src={"/ne.png"}
-        />
-      </div>
+      <div className="flex-1  px-2 bg-indigo-100 text-center ">
+  <img
+    className="md:ml-0  my-8 md:my-11 animate-spin  w-full bg-contain bg-center bg-no-repeat"
+    src={"/ne.png"}
+  />
+</div>
     </div>
     
     </div>
